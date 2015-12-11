@@ -1,0 +1,20 @@
+This python script converts multiple processed nxs files to ASCII format (.dat files). Copy "nxs2dat.py" to your favorite directory for executable files (such as $HOME/bin). Make sure the directory is in your $PATH.
+
+Enter the following command line to make the script executable
+
+$chmod 755 nxs2dat.py
+
+Then in any directory, type
+
+$nxs2dat.py nxsdir
+
+where nxsdir is the folder containing the nxs files you want to convert (absolute directory needed). The output dat files will be saved in the current directory. 
+
+If you want to specify a directory to save the output files, use
+
+$nxs2dat.py nxsdir asciidir
+
+asciidir needs to be an absolute directory, and if it does not exist, the script will create one.
+
+
+
