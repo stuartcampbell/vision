@@ -1,0 +1,25 @@
+This python script converts output from various first-principles codes to .aclimax format. Copy "2climax.py" and "elements.txt" to your favorite directory for executable files (such as $HOME/bin). Make sure the directory is in your $PATH.
+
+Enter the following command line to make the script executable
+
+$chmod 755 2climax.py
+
+Then go to the directory with the file you want to convert
+
+For VASP+Phonopy:
+$2climax.py -v POSCAR mesh.yaml
+
+For CASTEP:
+$2climax.py -c $seed.phonon
+
+For Quantum Espresso (currently orthorhombic cells only):
+$2climax.py -q $seed.ph.out mesh_k matdyn.modes
+
+For Gaussian:
+$2climax.py -g $seed.out
+
+By default the output will be in DOS format (newline = '\r\n'), and can be read by aClimax.
+
+The default output file is out.aclimax. If you want to use a different name, add your name of choice to the end of the above command lines.
+
+
